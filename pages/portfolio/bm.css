@@ -1,0 +1,44 @@
+.col-2{
+    border: 1px solid;
+}
+.col-8{
+    border: 1px solid;
+}
+.col-1{
+    border: 1px solid;
+    background: red;
+}
+
+.page-1{
+    height: 80vh;
+    background-color: red;
+}
+
+.background{
+    height: 60vh;
+}
+.background::before{
+    content: '';
+    background-image: url("https://poster.nicefon.ru/2016_09/15/800x450/153908f0f0c8c4d4c4cce8.jpg");
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+*{
+    color: goldenrod;
+}
+.header{
+    height: 60vh;
+}
+.footer{
+    height: 20vh;
+}
+*{
+    margin: 0;
+    padding: 0;
+}

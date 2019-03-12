@@ -11,12 +11,7 @@
 <!-- NAVS --><div class="nav_">
   <a href="http://andrey-safin.com/main"><button type="button" id="_main-btn-active" class="btn btn-info _header_navs" data-check="main">main</button></a>
   <a href="http://andrey-safin.com/market"><button type="button" class="btn btn-info _header_navs" data-check="market">market</button></a>
-  <a><button type="button" class="btn btn-info _header_navs" data-check="">universe</button></a>
-  <a><button type="button" class="btn btn-info _header_navs" data-check="">nexus</button></a>
-  <a><button type="button" class="btn btn-info _header_navs" data-check="">esports</button></a>
-  <a><button type="button" class="btn btn-info _header_navs" data-check="">community</button></a>
-  <a><button type="button" class="btn btn-info _header_navs" data-check="">support</button></a>
-  <a><button type="button" class="btn btn-info _header_navs" data-check="">merchandise</button></a>
+  <a href="pages/portfolio/index.php"><button type="button" class="btn btn-info" data-check="">about</button></a>
 </div>
             
 
