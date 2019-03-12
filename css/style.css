@@ -1,0 +1,37 @@
+/* NAV  +  HEADER */
+body{
+    background: url(../images/background/intersection.png);
+    font-family: 'Sniglet', cursive;
+}
+/* NAV - CHECKED BY ACTIVE CLASS */
+._active {
+    border: 1px solid rgb(0, 102, 102);
+    box-shadow: 0px 2px 2px blue;
+}
+
+.nav_{
+    text-align: center;
+}
+
+/* BLOCKS(CONTENTS)  in  CONTAINER */
+._contents{width: 100%; border: 1px solid; padding: 3%;}
+._time{display: inline-block;}
+._categorie{float: right;}
+
+
+/* GOODS */
+._singleGoods{width: 30.229%; min-height: 300px; border: 1px solid; display: inline-block; margin: 15px; text-align: center;}
+._singleGoods img{width: 200px; height: 200px;}
+._singleGoods button{margin-bottom: 17px;}
+
+
+/* HEADER - MENU */
+._search {display: inline-block;}
+.header-menu{width: 100px; height: 40px; border: 1px solid; background-color: lightskyblue; padding: 25px; margin: 10.8px;}
+.container{margin-top: 50px;}
+
+._basket{display: inline-block; margin: 2px; border: 1px solid;}
+#_basket{text-align: right;}
+
+
+/* MARKET */
