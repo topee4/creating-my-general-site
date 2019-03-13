@@ -1,3 +1,32 @@
+<?php /* Объявление переменных для пагинатора*/
+    require 'market_core/db.php';
+    $conn = connect();
+    $per_page = 6;
+    $page = 1;
+
+    if( isset($_GET['page']) ) {
+        $page = (int) $_GET['page'];
+    }
+
+
+
+    $total_count_goods_q = mysqli_query($conn, "SELECT COUNT(`id`) AS `total_count` FROM `goods`");
+    $total_count_goods = mysqli_fetch_assoc($total_count_goods_q);
+    $total_count_goods = $total_count_goods['total_count'];
+
+    $total_count_vegetables_q = mysqli_query($conn, "SELECT COUNT(id) AS total_count FROM vegetables");
+    $total_count_vegetables = mysqli_fetch_assoc($total_count_vegetables_q);
+    $total_count_vegetables = $total_count_vegetables['total_count'];
+
+    $total_count = $total_count_goods + $total_count_vegetables;
+
+    $total_pages = ceil($total_count / $per_page);
+    if ( $page <= 1 || $page > $total_pages ) {
+        $page = 1;
+    }
+
+    $offset = ($per_page * $page) - $per_page;
+?>
 <!-- TITLE  (AFTER NAV-HEADER) -->
 <div class="container">
     <div class="jumbotron jumbotron-fluid">
@@ -21,34 +50,34 @@
         <div class="_contents">
             <div class="_out"></div>
             <?php 
-            require 'market_core/db.php';
-                $conn = connect();
-                $per_page = 6;
-                $page = 1;
+    if ( $total_pages !=0 ) {
+        ?>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2 mx-auto" name="bottom" role="group" aria-label="First group">
+        <?php
+        echo '<div class="paginator">';
+        if ( $page > 1 ) {
+            echo '<a href="/market&page=' . ($page - 1) . '#bottom"><button type="button" data-page="' . ($page-1) . '" class="btn btn-secondary paginat_btn">Prev</button></a>';
+        }
+        for ($i = 1; $i < $total_pages+1; $i++) {
+            ?>
+            <a href="/market&page=<?php echo $i ?>#bottom"><button type="button" data-page="<?php echo $i?>" class="btn btn-secondary paginat_btn"><?php echo $i ?></button></a>
+            <?php
+        }
+        if ( $page < $total_pages ) {
+            echo '<a href="/market&page=' . ($page + 1) . '#bottom"><button type="button" data-page="' . ($page+1) . '" class="btn btn-secondary paginat_btn">Next</button></a>';
+
+        }
+        echo '</div>';
+        ?>
+        
+        </div>
+        <?php
+    }
+?>       
                 
-                if( isset($_GET['page']) ) {
-                    $page = (int) $_GET['page'];
-                }
-
-
-                
-                $total_count_goods_q = mysqli_query($conn, "SELECT COUNT(`id`) AS `total_count` FROM `goods`");
-                $total_count_goods = mysqli_fetch_assoc($total_count_goods_q);
-                $total_count_goods = $total_count_goods['total_count'];
-
-                $total_count_vegetables_q = mysqli_query($conn, "SELECT COUNT(id) AS total_count FROM vegetables");
-                $total_count_vegetables = mysqli_fetch_assoc($total_count_vegetables_q);
-                $total_count_vegetables = $total_count_vegetables['total_count'];
-
-                $total_count = $total_count_goods + $total_count_vegetables;
-                
-                $total_pages = ceil($total_count / $per_page);
-                if ( $page <= 1 || $page > $total_pages ) {
-                    $page = 1;
-                }
-
-                $offset = ($per_page * $page) - $per_page;
-                
+        </div>
+            <?php 
                 $result = mysqli_query ($conn, "SELECT * FROM `items` ORDER BY  `id` DESC LIMIT $offset, $per_page");
                 if ( mysqli_num_rows($result) > 0 ) {
                     $out = array();
@@ -76,19 +105,20 @@
     if ( $total_pages !=0 ) {
         ?>
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-        <div class="btn-group mr-2" role="group" aria-label="First group">
+        <div class="btn-group mr-2 mx-auto" name="bottom" role="group" aria-label="First group">
         <?php
         echo '<div class="paginator">';
         if ( $page > 1 ) {
-            echo '<a href="/market&page=' . ($page - 1) . '">&laquo; Прошлая страница </a>';
+            echo '<a href="/market&page=' . ($page - 1) . '#bottom"><button type="button" data-page="' . ($page-1) . '" class="btn btn-secondary paginat_btn">Prev</button></a>';
         }
         for ($i = 1; $i < $total_pages+1; $i++) {
             ?>
-            <a href="/market&page=<?php echo $i ?>"><button type="button" class="btn btn-secondary"><?php echo $i ?></button></a>
+            <a href="/market&page=<?php echo $i ?>#bottom"><button type="button" data-page="<?php echo $i?>" class="btn btn-secondary paginat_btn"><?php echo $i ?></button></a>
             <?php
         }
         if ( $page < $total_pages ) {
-            echo '<a href="/market&page=' . ($page + 1) . '">Следующая страница &raquo;</a>';
+            echo '<a href="/market&page=' . ($page + 1) . '#bottom"><button type="button" data-page="' . ($page+1) . '" class="btn btn-secondary paginat_btn">Next</button></a>';
+
         }
         echo '</div>';
         ?>
@@ -97,11 +127,6 @@
         <?php
     }
 ?>       
-
-
-
-
-                   
                 
         </div>
 
