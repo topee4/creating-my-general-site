@@ -16,7 +16,7 @@ $(document).ready(function () {
 function addEvents() {
     $('._header_navs').on('click', function () {
         
-        $(this).addClass("_active");
+        $(this).addClass("active");
         var checker = $(this).attr("data-check");
 
         if (memory[0] != undefined) {
@@ -35,7 +35,7 @@ function showMemory() {
         take = JSON.parse(localStorage.getItem('memory'));
         $.each($('._header_navs'), function () {
             if ($(this).attr('data-check') == take[0]) {
-             $(this).addClass("_active");
+             $(this).addClass("active");
             }
         });
     }
