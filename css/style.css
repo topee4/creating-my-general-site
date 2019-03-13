@@ -8,9 +8,13 @@ body{
 .nav_{
     text-align: center;
 }
+/* ARTICLE CSS */
+._indent{text-indent: 20px;}
+._underline{text-decoration: underline;}
 
 /* BLOCKS(CONTENTS)  in  CONTAINER */
-._contents{width: 100%; border: 1px solid; padding: 3%;}
+._wrap{ padding: 3%;}
+._contents{width: 100%; border: 1px solid; padding: 2%; border-radius: 20px;}
 ._time{display: inline-block;}
 ._categorie{float: right;}
 

@@ -83,7 +83,7 @@ function sendEmail(){
     if(ename != '' && email != '' && ephone != '') {
         if(isEmpty(basket)){
             $.post(
-                "core/mail.php",
+                "templates/mail.php",
                 {
                     "ename" : ename,
                     "email" : email,

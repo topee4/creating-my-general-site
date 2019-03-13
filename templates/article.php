@@ -1,5 +1,5 @@
 <?php 
-  require 'market_core/db.php'
+  require 'market_core/db.php';
 ?><!-- HEADER -->    
 
 <!-- TITLE  (AFTER NAV-HEADER) -->
@@ -21,11 +21,11 @@
   <div class="container">
     <div class="row card bg-light mb-3">
     <div class="card-header">Articles</div>
-    <div class="row">
-
+    
       <?php 
       $conn = connect();
-      $sql = 'SELECT * FROM articles';
+      $id = $_GET['id'];
+      $sql = "SELECT * FROM articles WHERE id = '$id'";
       $result = mysqli_query($conn, $sql);
 
       if( mysqli_num_rows($result) > 0 ) {
@@ -39,14 +39,13 @@
                     $result = mysqli_query($conn, $sql);
   ?>
   
-      <div class="col-4 mt-3 mb-3">
-        <div class="_wrap">
-        <div class="_contents">
+      <div class="col-12 mt-3 mb-3">
+        
           <div class="card border-dark mb-3">
-          <div class="card-header"><a href="/article&id=<?php  echo $item['id'] ?>"><h5><?php echo $item['title']; ?></h5></a></div>
+          <div class="card-header"><h5><?php echo $item['title']; ?></h5></a></div>
               <div class="card-body text-dark">
                 <h5 class="card-title"><img src="images/articles/<?php echo $item['img']; ?>" width="100%" height="100%" alt="image"></h5>
-                <p class="card-text"><?php echo mb_substr($item['description'], 0, 325, 'utf-8') . ' <strong>. . .</strong>' ?></p>
+                <p class="card-text"><p><?php echo $item['description']; ?></p></p>
               </div>
             <div class="card-footer bg-transparent border-dark">
               <div class="_time"><?php echo $item['date']; ?></div>
@@ -64,7 +63,6 @@
                 </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
           <?php

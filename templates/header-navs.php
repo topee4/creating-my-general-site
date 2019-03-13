@@ -3,7 +3,7 @@
 <div class="container-fluid">
       <div class="row">
         <div class="col">
-          <a id="_main-logo" href="/"><img src="images/logo/logo.png" alt="logo"></a>
+          <a id="_main-logo" href="/main"><img src="images/logo/logo.png" alt="logo"></a>
         </div>
         <div class="col-6">
 
