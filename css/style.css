@@ -3,6 +3,35 @@ body{
     background: url(../images/background/intersection.png);
     font-family: 'Sniglet', cursive;
 }
+._right, ._left{
+    background: url(../images/background/dark-honeycomb.png);
+    width: 15%;
+    height: 100vh;
+    margin-left: 100px;
+    opacity: .85;
+    position: fixed;
+    z-index: -10;
+}
+._right{
+    right: 20px;
+}
+._left{
+    left: -80px;
+}
+
+._header_navs_before::before{
+    content: "";
+    display: block;
+    pointer-events: none;
+    width: 70px;
+    height: 6px;
+    background: url(../images/background/dark-honeycomb.png);
+    position: relative;
+    top: 45px;
+    opacity: .85;
+    margin: auto;
+    z-index: 10000;
+}
 /* NAV - CHECKED BY ACTIVE CLASS */
 
 .nav_{
@@ -35,3 +64,7 @@ body{
 
 
 /* MARKET */
+
+
+/*FOOTER*/
+._footer{color: white;}

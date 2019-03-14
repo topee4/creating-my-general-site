@@ -47,11 +47,9 @@
 
 <!-- CONTAINER -->
 <div class="container">
-    <div class="row">
-        
-        <div class="_contents">
-            <div class="_out"></div>
-            <?php 
+    <div class="row card bg-light mb-3">
+    <div class="card-header">Market</div>
+    <?php 
     if ( $total_pages !=0 ) {
         ?>
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
@@ -79,6 +77,9 @@
 ?>       
                 
         </div>
+    
+
+        <div class="row"> 
             <?php 
                 $result = mysqli_query ($conn, "SELECT * FROM `items` ORDER BY  `id` DESC LIMIT $offset, $per_page");
                 if ( mysqli_num_rows($result) > 0 ) {
@@ -88,14 +89,23 @@
                     }
                     foreach ( $out as $item ) {
                     ?>
-                        <div class="_singleGoods">
-                            <img src="images/goods/<?php echo $item['img'] ?>">
-                            <h5><?php echo $item['name'] ?></h5>
-                            <p><u>Цена</u>: <?php echo $item['cost'] ?></p>
-                            <p><?php echo $item['description'] ?></p>
+                    <div class="col-4 mt-3 mb-3">
+                      <div class="_wrap">
+                          
+                      <div class="_contents">
+                        <div class="card border-dark mb-3">
+                        
+                            <div class="p-5"><img src="images/goods/<?php echo $item['img']; ?>" width="100%"></div>
+                            <h5><?php echo $item['name']; ?></h5>
+                            <p><u>Цена</u>: <?php echo $item['cost']; ?></p>
+                            <p><?php echo $item['description']; ?></p>
                             <hr>
-                            <button class="_buy" data-name="<?php echo $item['name'] ?>" data-id="<?php echo $item['id'] ?>">В корзину</button>
+                            <button class="_buy" data-name="<?php echo $item['name']; ?>" data-id="<?php echo $item['id']; ?>">В корзину</button>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                        
                         <?php
                     }
                 } else {
@@ -103,7 +113,10 @@
                 }
                 
                 ?>
-<?php 
+
+
+    </div>
+    <?php 
     if ( $total_pages !=0 ) {
         ?>
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
@@ -131,6 +144,5 @@
 ?>       
                 
         </div>
-
-    </div>
+</div>
 </div>
