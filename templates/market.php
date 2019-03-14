@@ -34,7 +34,7 @@
         <div class="container">
           <h1 class="display-4">DRON - MARKET</h1>
           <p class="lead">Отличная цена и широкий выбор</p>
-          <h4><a href="basket"><b><i>Перейти в корзину</i></b></a></h4>
+          <h4><a href="basket"><b><i class="_color">Перейти в корзину</i></b></a></h4>
         </div>
     </div>
     <div class="card-footer"></div>
@@ -46,7 +46,7 @@
 
 
 <!-- CONTAINER -->
-<div class="container">
+<div class="container _min-height">
     <div class="row card bg-light mb-3">
     <div class="card-header">Market</div>
     <?php 
@@ -89,18 +89,16 @@
                     }
                     foreach ( $out as $item ) {
                     ?>
-                    <div class="col-4 mt-3 mb-3">
-                      <div class="_wrap">
-                          
-                      <div class="_contents">
-                        <div class="card border-dark mb-3">
-                        
-                            <div class="p-5"><img src="images/goods/<?php echo $item['img']; ?>" width="100%"></div>
-                            <h5><?php echo $item['name']; ?></h5>
-                            <p><u>Цена</u>: <?php echo $item['cost']; ?></p>
-                            <p><?php echo $item['description']; ?></p>
-                            <hr>
-                            <button class="_buy" data-name="<?php echo $item['name']; ?>" data-id="<?php echo $item['id']; ?>">В корзину</button>
+                <div class="col-4 mt-3 mb-3">
+                    <div class="_wrap">
+                        <div class="_contents text-center">
+                            <div class="card border-dark mb-3">
+                                <div class="p-5"><img src="images/goods/<?php echo $item['img']; ?>" width="100%"></div>
+                                <h5 style="font-size: 25px; box-shadow: 0px 0px 1px black; color: #ffc900"><?php echo $item['name']; ?></h5>
+                                <p><u>Цена</u>: <strong style="font-size: 25px;"><?php echo $item['cost']; ?></strong></p>
+                                <p>Описание: <?php echo $item['description']; ?></p>
+                                <hr>
+                                <button type="button" class="btn btn-warning _buy" style="color: lightyellow;" data-name="<?php echo $item['name']; ?>" data-id="<?php echo $item['id']; ?>">В корзину</button>
                             </div>
                         </div>
                     </div>

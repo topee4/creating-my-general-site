@@ -1,4 +1,17 @@
 /* MARKET */
-button._delete{height: 40px; width: 85%;}
-._email-field{margin: 20px auto; border: 1px solid; padding: 30px;}
-._send-email{width: 100%;}
+button._delete{height: 40px; width: 80%; border: 1px solid black; font-size: 25px; width: 100px; line-height: 10px; color: lightyellow}
+
+._minus, ._plus {
+    color: darkorange;
+    font-size: 25px;
+    border: 1px solid black;
+}
+
+._contact-form{
+    position: absolute;
+    top: -48px;
+    right: -380px;
+}
+._basket-height{
+    min-height: 380px;
+}

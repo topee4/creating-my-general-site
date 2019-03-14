@@ -1,6 +1,6 @@
 var basket = {}; //Корзина
 
-$.getJSON('goods.json', function(data){
+$.getJSON('items.json', function(data){
     var goods = {};
     goods = data; //Все товары в массиве
     checkBasket();
@@ -16,15 +16,19 @@ function showBasket(){
         var out = '';
         
         for(var index in basket){
-            out+='<div class="_singleGoods">';
-                out+='<button class="_delete" data-art="' + index + '">x</button>';
-                out+='<p><h2>' + goods[index].name + '</h2></p>';
-                out+='<hr>';
-                out+='<img src="images/goods/' + goods[index].img + '">';
-                out+='<p><u>Количество</u>: ' + '<button class="_minus" data-art="' + index + '">-</button> ' + basket[index] + ' <button class="_plus" data-art="' + index + '">+</button>' + '</p>';
-                out+='<hr>';
-                out+='<p>Цена: ' + goods[index].cost * basket[index] + '</p>';
+            out+='<div class="col-4 mt-3 mb-3">';
+            out+='<div class="_wrap">';
+                out+='<div class="_contents _hide">';
+                    out+='<div class="card border-dark mb-3 text-center">';
+                        out+='<button type="button" class="btn btn-warning _delete m-auto" data-art="' + index + '">x</button>';
+                        out+='<div class="p-5"><img src="images/goods/' + goods[index].img + '" width="100%"></div>';
+                        out+='<h5>' + goods[index].name + '</h5>';
+                        out+='<p><u>Количество</u>: ' + '<button type="button" class="btn btn-light _minus" data-art="' + index + '">-</button> ' + basket[index] + ' <button type="button" class="btn btn-light _plus" data-art="' + index + '">+</button></p>';
+                        out+='<p>Цена: <strong style="font-size: 25px;">' + goods[index].cost * basket[index] + '</strong></p>';
+                    out+='</div>';
+                out+='</div>';
             out+='</div>';
+        out+='</div>';
         }
         $('._out').html(out);
         $('._minus').on('click', minusGoods);

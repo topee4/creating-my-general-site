@@ -18,6 +18,10 @@ body{
 ._left{
     left: -80px;
 }
+._color{color: #ffc107; text-decoration: underline; text-decoration-color: #343a40;}
+._color:hover{
+    text-decoration-color: darkgray;
+}
 
 ._header_navs_before::before{
     content: "";
@@ -33,7 +37,7 @@ body{
     z-index: 10000;
 }
 /* NAV - CHECKED BY ACTIVE CLASS */
-
+._min-height .card {min-height: 520px;}
 .nav_{
     text-align: center;
 }
