@@ -43,6 +43,9 @@ if ( isset($_POST['do_logout']) ) {
         case 'article':
             require 'templates/article.php';
             break;
+        case 'game':
+            require 'templates/game.php';
+            break;
         case 'basket':
             require 'templates/basket.php';
             break;
