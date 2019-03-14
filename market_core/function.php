@@ -93,7 +93,7 @@ function newGoods(){
 
 function writeJSON () {
     $conn = connect();
-    $sql = "SELECT * FROM vegetables";
+    $sql = "SELECT * FROM items";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0){
@@ -101,7 +101,7 @@ function writeJSON () {
         while ($row = mysqli_fetch_assoc($result)) {
             $out[$row["id"]] = $row;
         }
-        $a = file_put_contents ('../vegetables.json', json_encode($out));
+        $a = file_put_contents ('../items.json', json_encode($out));
         echo 'write+' . $a;
     } else {
         echo "0";
