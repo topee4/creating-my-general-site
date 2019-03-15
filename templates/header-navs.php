@@ -28,15 +28,14 @@
       <div class="row">
       <div class="col-6"></div>
        <div class="col-6"> <?php if ( isset($_SESSION['logged_user']) ) : ?>
-              Авторизован!<br>
-              Привет, <?php echo $_SESSION['logged_user']->login ?>
-              <hr>
-              <form action="logout" method="POST">
+              <span style="color: white;">Привет, <?php echo $_SESSION['logged_user']->login ?></span>
+              <a role="button" id="profile_menu" data-toggle="popover"><img src="images/profile/profile_menu.png" alt="profile" width="45px"></a>
+              <!-- <hr>-->
+              <!-- <form action="logout" method="POST">
                 <button type="submit" name="do_logout" class="btn btn-primary">Выйти</button>
-              </form>
+              </form>  -->
             <?php else : ?>
-          <a href="login" style="color: white;">Авторизация</a> <span style="color: white;"> / </span>
-          <a href="signup" style="color: white;">Регистрация</a>
+          <a href="login"><img src="images/profile/profile.png" alt="profile" width="45px"></a>
         <?php endif; ?></div>
       </div>
        
