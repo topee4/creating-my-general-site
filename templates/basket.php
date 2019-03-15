@@ -10,7 +10,7 @@
 <div class="container _contact-form">
     <div class="row">
       <div class="col-4 mt-4 mb-4"></div>
-      <div class="col-4 mt-4 mb-4">
+      <div class="col-4 mt-4 mb-4 _hide">
 
       <div class="alert alert-info" style="border: 1px solid black;" role="alert">
         <h2>Contact form</h2>

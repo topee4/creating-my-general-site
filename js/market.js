@@ -10,8 +10,8 @@ function init () {
     );
 }
 
-
 $(document).ready(function(){
+    
     init();
     checkBasket();
 });
@@ -38,6 +38,8 @@ function goodsOut(data){
 }
 
 function addToCart(){
+    
+
     //Добавляю товар в корзину
     //Имя товара
     //    var name = $(this).attr('data-name');
@@ -50,7 +52,11 @@ function addToCart(){
         basket[id] = 1;
     }   
 
+    $(this).find(".hiddenCart").addClass("_flag");
     localStorage.setItem('basket', JSON.stringify(basket));
+
+
+
 }
 function checkBasket(){
     //Проверяю наличие корзины в localStorage

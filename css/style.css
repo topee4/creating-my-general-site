@@ -46,7 +46,7 @@ body{
 ._underline{text-decoration: underline;}
 
 /* BLOCKS(CONTENTS)  in  CONTAINER */
-._wrap{ padding: 3%;}
+._wrap{padding: 3%;}
 ._contents{width: 100%; border: 1px solid; padding: 2%; border-radius: 20px;}
 ._time{display: inline-block;}
 ._categorie{float: right;}
@@ -57,6 +57,7 @@ body{
 ._singleGoods img{width: 200px; height: 200px;}
 ._singleGoods button{margin-bottom: 17px;}
 
+._card_img img{height: 224px;}
 
 /* HEADER - MENU */
 ._search {display: inline-block;}
@@ -72,3 +73,7 @@ body{
 
 /*FOOTER*/
 ._footer{color: white;}
+
+.hiddenCart{color: red; border: 1px solid yellowgreen; color: yellowgreen; width: 100px; margin: auto; z-index: 2; display: block; line-height: 20px; border-radius: 5px; pointer-events: none; position: absolute; transition: all ease .5s; left: 0px; bottom: 0; opacity: 0;}
+.hiddenCart span{background: lightyellow; display: block; border-radius: 5px;}
+._buy{z-index: 3; position: relative; height: 42px; width: 101px;}

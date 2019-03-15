@@ -93,12 +93,18 @@
                     <div class="_wrap">
                         <div class="_contents text-center">
                             <div class="card border-dark mb-3">
-                                <div class="p-5"><img src="images/goods/<?php echo $item['img']; ?>" width="100%"></div>
-                                <h5 style="font-size: 25px; box-shadow: 0px 0px 1px black; color: #ffc900"><?php echo $item['name']; ?></h5>
-                                <p><u>Цена</u>: <strong style="font-size: 25px;"><?php echo $item['cost']; ?></strong></p>
-                                <p>Описание: <?php echo $item['description']; ?></p>
+                                <div class="p-5 _card_img"><img src="images/goods/<?php echo $item['img']; ?>" width="100%"></div>
+                                <div class="_card_h"><h5 style="font-size: 25px; box-shadow: 0px 0px 1px black; color: #ffc900"><?php echo $item['name']; ?></h5></div>
+                                <div class="_card_p"><p><u>Цена</u>: <strong style="font-size: 25px;"><?php echo $item['cost']; ?></strong></p></div>
+                                <div class="_card_p"><p>Описание: <i><?php echo $item['description']; ?></i></p></div>
                                 <hr>
-                                <button type="button" class="btn btn-warning _buy" style="color: lightyellow;" data-name="<?php echo $item['name']; ?>" data-id="<?php echo $item['id']; ?>">В корзину</button>
+                                <div class="_card_btn">
+                                    <button type="button" class="btn btn-warning _buy" style="color: lightyellow;" data-name="<?php echo $item['name']; ?>" data-id="<?php echo $item['id']; ?>">В корзину
+                                    <div class="hiddenCart">
+                                        <span>Добавлено<br> в корзину</span>
+                                    </div>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
