@@ -9,6 +9,15 @@ $(document).ready(function () {
         localStorage.setItem('memory', JSON.stringify(memory));
     });
 });
+$(document).ready(function(){
+    $("#profile_menu").popover({
+      html: true,
+      content: '<div m-auto><a href="profile"><button style="width: 100%" type="button" class="btn btn-dark">profile</button></a><hr><form action="logout" method="POST"><button style="width: 100%" type="submit" name="do_logout" class="btn btn-dark">Выйти</button></form></div>',
+      trigger: 'click',
+      placement: 'bottom'
+    });
+});
+
 
 
 

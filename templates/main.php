@@ -1,11 +1,9 @@
 <?php 
   require 'market_core/db.php'
-?><!-- HEADER -->    
-
+?><!-- HEADER -->
 <!-- TITLE  (AFTER NAV-HEADER) -->
 <div class="container card bg-light mb-3">
 <div class="card-header"></div>
-
   <div class="jumbotron jumbotron-fluid bg-light">
     <div class="container">
     <h1 class="display-4">DRON - BLOG</h1>
@@ -45,8 +43,8 @@
           <div class="card border-dark mb-3 _card_wrapper">
           <div class="card-header"><a href="/article&id=<?php  echo $item['id'] ?>"><h5><?php echo $item['title']; ?></h5></a></div>
               <div class="card-body text-dark">
-                <h5 class="card-title"><img src="images/articles/<?php echo $item['img']; ?>" width="100%" height="100%" alt="image"></h5>
-                <p class="card-text"><?php echo mb_substr($item['description'], 0, 170, 'utf-8') . ' <strong>. . .</strong>' ?></p>
+                <div class="main_card_img"><img src="images/articles/<?php echo $item['img']; ?>" width="100%" height="100%" alt="image"></div>
+                <div class="_card_p"><p class="card-text"><?php echo mb_substr($item['description'], 0, 170, 'utf-8') . ' <strong>. . .</strong>' ?></p></div>
               </div>
             <div class="card-footer bg-transparent border-dark">
               <div class="_time"><?php echo $item['date']; ?></div>
