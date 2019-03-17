@@ -40,6 +40,9 @@ if ( isset($_POST['do_logout']) ) {
         case 'market':
             require 'templates/market.php';
             break;
+        case 'about':
+            require 'pages/portfolio/index.php';
+            break;
         case 'profile':
             require 'templates/profile.php';
             break;

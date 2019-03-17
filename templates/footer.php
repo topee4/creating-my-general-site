@@ -28,14 +28,17 @@
                 break;
             case 'main':
                 break;
+            case 'game':
+                echo '<script src="js/game.js"></script>';
+                break;
             case 'market':
-            echo '<script src="js/market.js"></script>';
+                echo '<script src="js/market.js"></script>';
                 break;
             case 'fruits':
-            echo '<script src="js/fruits.js"></script>';
+                echo '<script src="js/fruits.js"></script>';
                 break;
             case 'vegetables':
-            echo '<script src="js/vegetables.js"></script>';
+                echo '<script src="js/vegetables.js"></script>';
                 break;
             case 'basket':
                 echo '<script src="js/basket.js"></script>';

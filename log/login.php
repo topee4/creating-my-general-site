@@ -13,7 +13,7 @@
             } else if ( password_verify($data['password'], $user->password) ) {
                 // все хорошо, логиним пользователя
                 $_SESSION['logged_user'] = $user;
-                echo '<div class="_message" style="color: green;"><h4>Добро пожаловать ' . $user['login'] . '!<br>Можете вернуться на <a href="/">главную</a></h4></div><hr>';
+                echo '<div class="_message" style="color: green;"><h4>Добро пожаловать ' . $user['login'] . '!<br>Можете вернуться на <a href="main">главную</a></h4></div><hr>';
             } else {
                 $errors[] = 'Неверно введён пароль!';
             }
@@ -56,7 +56,8 @@
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
-            <button type="submit" name="do_login" class="btn btn-primary">Submit</button>
+            <button type="submit" name="do_login" class="btn btn-primary">Submit</button><hr>
+            <a href="signup">Sign up</a>
           </form>
         </div>
 

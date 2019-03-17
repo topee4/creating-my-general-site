@@ -100,3 +100,10 @@ body{
 .hiddenCart{color: red; border: 1px solid yellowgreen; color: yellowgreen; width: 100px; margin: auto; z-index: 2; display: block; line-height: 20px; border-radius: 5px; pointer-events: none; position: absolute; transition: all ease .5s; left: 0px; bottom: 0; opacity: 0;}
 .hiddenCart span{background: lightyellow; display: block; border-radius: 5px;}
 ._buy{z-index: 3; position: relative; height: 42px; width: 101px;}
+
+/*GAMES*/
+._play_btn{display: inline-block; margin-left: 10%; border: 5px solid darkgreen; border-radius: 15%; color: white; background-color: #ec6464; cursor: pointer; transition: all ease .2s; position: relative; left: 0px;}
+._play_btn:hover{ border-radius: 20%; font-size: 38px; left: 1px;}
+
+/* PROFILE */
+form input, textarea{width: 300px;}
