@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css?family=Black+And+White+Picture');
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+body{
+    background: lightgray;
+}
+/*BASESETTINGS*/
+
+#game{
+    position: relative;
+    top: 70px;
+    background: darkslategray;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 100px auto;
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+}
+.re{
+    font-family: 'Black And White Picture', sans-serif;
+    letter-spacing: 4px;
+    position: relative;
+    top: 0px;
+    left: 310px;
+    cursor: pointer;
+    text-decoration: none;
+}
+tr{
+    width: 300px;
+    height: 100px;
+    margin: 5px;
+}
+td{
+    font-family: 'Black And White Picture', sans-serif;
+    letter-spacing: 4px;
+    color: white;
+    font-size: 80px;
+    text-align: center;
+    line-height: 100px;
+    border: 1px solid gray;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+.stat.place{
+    position: absolute;
+    width: 300px;
+    height: 170px;
+    background: white;
+    color: darkslategray;
+    border: none;
+    margin: 50px auto;
+    
+}
+.stat.place h1 span{
+    text-decoration: underline;
+    text-decoration-color: white;
+    color: darkslategray;
+    font-size: 40px;
+}
+.stat.place h1{
+    text-align: center;
+}
+.stat{
+    color: darkslategray;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    line-height: 33px;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-color: brown;
+}
+/*TIC TAC TOE*/
+/*TIC TAC TOE*/
+/*TIC TAC TOE*/
+/*TIC TAC TOE*/
+/*TIC TAC TOE*/
+/*TIC TAC TOE*/
+/*TIC TAC TOE*/
+
+
+#modalGameWindow,#modalGameWindow2{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: gray;
+    opacity: 0.9;
+}
+#isWindow,#isWindow2{
+    background: white;
+    height: 85vh;
+    width: 40%;
+    margin: -50px auto;
+    border-radius: 10px;
+}
+.statWindow{
+    background: white;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50px;
+    right: 350px;
+}
+#closeModal{
+    opacity: 0.7;
+    position: absolute;
+    right: 581px;
+    top: 80px;
+}
+#closeModal2{
+    opacity: 0.7;
+    position: absolute;
+    right: 581px;
+    top: 60px;
+}
+#closeModal img,#closeModal2 img{
+    opacity: 0.7;
+    transform: rotate(0deg);
+    transition: all 1.5s ease;
+    cursor: pointer;
+}
+#closeModal img:hover,#closeModal2 img:hover{
+    opacity: 0.7;
+    transform: rotate(720deg);
+    transition: all  1.5s ease;
+}
+
+
+
+
+
+
+header{
+    border-bottom-left-radius: 30px 40px;
+    border-bottom-right-radius: 30px 40px;
+    position: relative;
+    background: white;
+    text-align: center;
+    max-width: 1550px;
+    height: 120px;
+    margin: 0 auto;
+    z-index: 99;
+}
+.wrapForLogo{
+    transform: rotate(0deg);
+    transition: all ease 1.5s;
+    background: url(img/pokebal.png) 100% 100% no-repeat;
+    background-size: cover;
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+}
+.wrapForLogo:hover{
+    transform: rotate(720deg);
+    transition: all ease 1.5s;
+    cursor: pointer;
+}
+.wrapForName{
+    width: 1430px;
+    line-height: 120px;
+    float: right;
+    letter-spacing: 30px;
+    word-spacing: 8px;
+    font-size: 13px;
+    font-weight: initial;
+}
+.headName span{
+    font-weight: bold;
+    font-size: 54px;
+}
+.ribbon{
+    position: relative;
+    width: 200px;
+
+    background-color: #BFDC7A; /* цвет ленты */
+
+    font: bold 16px Sans-Serif;
+
+    color: #333;    /* цвет шрифта */
+
+    text-align: center;
+
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+
+    padding: 7px 0;
+
+    top: 10px;
+
+    left: 10px;
+
+    -webkit-transform: rotate(45deg);
+
+    -moz-transform:    rotate(45deg);
+
+    -ms-transform:     rotate(45deg);
+
+    -o-transform:      rotate(45deg);
+
+}
+.wrapRibbon {
+    position: absolute;
+    width: 135px;
+    height: 126px;
+    overflow: hidden;
+    top: 0px;
+    left: 1415px;
+}
+/*LOGO+NAME+RIBBON*/
+
+
+
+
+
+.menuBar{
+    border-bottom-left-radius: 100px 150px;
+    border-bottom-right-radius: 100px 150px;
+    background: white;
+    margin: 0 auto;
+    width: 1500px;
+    border-top: 1px solid lightgray;
+    text-align: right;
+}
+.menuBar a{
+    text-decoration: none;
+}
+.menuBar ul{
+    font-size: 22px;
+    cursor: pointer;
+    display: inline-block;
+    list-style-type: none;
+    margin-top: -10px;
+}
+.menuBar li{
+    text-align: center;
+    width: 100px;
+    display: inline-block;
+    padding: 20px;
+}
+.menuBar li:hover{
+	background: white;
+	box-shadow: inset 1px 1px 5px grey;
+}
+.menuBar li:hover a{
+    color: grey;
+    text-decoration: underline;
+    text-decoration-color: #BFDC7A;
+    text-decoration-style: double;
+}
+.leftBorder{
+    border-left: 1px solid lightgray;
+}
+.clip{
+    border-bottom-right-radius: 100px 150px;
+}
+/*MENU-BAR*/
+
+
+
+
+.content{
+    border-top-left-radius: 150px 150px;
+    border-top-right-radius: 150px 150px;
+    height: 2000px;
+    border: 1px solid white;
+    width: 1700px;
+    margin: 0 auto;
+}
+
+
+
+.hierarchy{
+    display: none;
+}
+.leftMenu{
+    float: left;
+    border-top-left-radius: 150px 150px;
+    background: white;
+    width: 200px;
+    padding: 70px;
+    margin: 1px;
+    border-bottom-left-radius: 150px 140px;
+}
+
+
+
+
+.leftMenu ul{
+    font-size: 25px;
+    list-style-type: none;
+}
+.leftMenu li{
+    text-align: left;
+}
+.leftMenu a{
+    display: block;
+    cursor: pointer;
+    width: 140px;
+    height: 20px;
+    padding: 20px;
+    margin: 10px;
+    text-decoration: none;
+}
+.leftMenu a:hover{
+    text-decoration: underline;
+    text-decoration-color: #BFDC7A;
+    text-decoration-style: solid;
+}
+.leftMenu li li{
+    font-size: 17px;
+    padding: 15px;
+}
+.leftMenu li:hover{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.fadeEvent:nth-child(1):before{
+    content: '\00A0';
+    background-image: url(img/pokebal.png);
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    display: block;
+    position: relative;
+    top: 54px;
+}
+.fadeEvent:nth-child(2):before{
+    content: '\00A0';
+    background-image: url(img/pokebal.png);
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    display: block;
+    position: relative;
+    top: 54px;
+}
+.fadeEvent:nth-child(3):before{
+    content: '\00A0';
+    background-image: url(img/pokebal.png);
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    display: block;
+    position: relative;
+    top: 54px;
+}
+
+
+
+
+
+.contentMiddle{
+    float: left;
+    position: relative;
+    margin: auto;
+    width: 1014px;
+    height: 800px;
+    background: white;
+    margin: 1px;
+}
+
+
+
+
+.rightMenu{
+    float: right;
+    border-top-right-radius: 150px 150px;
+    background: white;
+    width: 200px;
+    padding: 70px;
+    margin: 1px;
+    height: 1000px;
+}
+a{
+    text-decoration-color: #BFDC7A;
+    text-decoration: underline;
+    text-decoration-style: solid;
+}
+
+
+
+
+
+
+/*GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME*/
+/*GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME*/
+/*GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME*/
+/*GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME*/
+/*GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME*/
+#wrap{
+    overflow: hidden;
+    opacity: 0;
+    width: 550px;
+    height: 550px;
+    margin: 0 auto 0;
+    outline: 2px solid black;
+    cursor: pointer;
+}
+.block{
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+    float: left;
+    outline: 0.5px solid black;;
+}
+.again{
+    display: none;
+    text-align: center;
+    display: block;
+    margin: 25px auto;
+    width: 300px;
+    height: 25px;
+    line-height: 25px;
+    background: LightCoral;
+    color: lightyellow;
+    font-weight: bold;
+    border-radius: 30px;
+    letter-spacing: 10px;
+    box-shadow: 3px 3px 1px #ddd;
+    
+    cursor: pointer;
+}
+.again:hover{
+    opacity: 0.8;
+}
+.again:active{
+    color: yellow;
+    opacity: 1;
+}
+.start{
+    margin: 80px auto 25px;
+}
+
+.again.timer{
+    top: 0;
+    position: relative;
+    margin: 120px auto 25px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 40px;
+    top: 10px;
+}
+.again.timer:hover{
+    opacity: 1;
+    cursor: default;
+}
+.again.timer:active{
+    color: lightyellow;
+}
+.hidden{
+    opacity: 0;
+}
+.again.btn{
+    display: none;
+}
+.hide{
+    display: none;
+}
+/*GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME*/
+/*GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME      GAME GAME GAME GAME GAME*/
+/*GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME*/
+/*GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME*/
+/*GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME*/

@@ -21,7 +21,7 @@ function showBasket(){
                 out+='<div class="_contents _hide">';
                     out+='<div class="card border-dark mb-3 text-center">';
                         out+='<button type="button" class="btn btn-warning _delete m-auto" data-art="' + index + '">x</button>';
-                        out+='<div class="p-5"><img src="images/goods/' + goods[index].img + '" width="100%"></div>';
+                        out+='<div class="p-5 _card_img"><img src="images/goods/' + goods[index].img + '" width="100%"></div>';
                         out+='<h5>' + goods[index].name + '</h5>';
                         out+='<p><u>Количество</u>: ' + '<button type="button" class="btn btn-light _minus" data-art="' + index + '">-</button> ' + basket[index] + ' <button type="button" class="btn btn-light _plus" data-art="' + index + '">+</button></p>';
                         out+='<p>Цена: <strong style="font-size: 25px;">' + goods[index].cost * basket[index] + '</strong></p>';

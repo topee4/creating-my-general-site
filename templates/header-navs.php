@@ -10,13 +10,13 @@
   </div>
       <div class="row">
         <div class="col">
-          <a id="_main-logo" href="/main"><img src="images/logo/logo.png" alt="logo" height="45vh"></a>
+          <a id="_main-logo" href="main"><img src="images/logo/logo.png" alt="logo" height="45vh"></a>
         </div>
         <div class="col-6">
 
 <!-- NAVS --><div class="nav_">
-  <a href="http://andrey-safin.com/main"><button type="button" class="btn btn-light _header_navs _header_navs_before" data-check="main">main</button></a>
-  <a href="http://andrey-safin.com/market"><button type="button" class="btn btn-light _header_navs _header_navs_before" data-check="market">market</button></a>
+  <a href="main"><button type="button" class="btn btn-light _header_navs _header_navs_before" data-check="main">main</button></a>
+  <a href="market"><button type="button" class="btn btn-light _header_navs _header_navs_before" data-check="market">market</button></a>
   <a href="game"><button type="button" class="btn btn-light _header_navs _header_navs_before" data-check="game">game</button></a>
   <a href="pages/portfolio/index.php"><button type="button" class="btn btn-light _header_navs_before" data-check="about">about</button></a>
   
