@@ -1,4 +1,5 @@
 /* NAV  +  HEADER */
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei');
 body{
     background: url(../images/background/intersection.png);
     font-family: 'Sniglet', cursive;
@@ -106,4 +107,43 @@ body{
 ._play_btn:hover{ border-radius: 20%; font-size: 38px; left: 1px;}
 
 /* PROFILE */
+
 form input, textarea{width: 300px;}
+
+._prof{cursor: pointer; border: 1px solid white; width: 50%; margin: 0px; padding: 0px; display: inline-block; height: 40px; line-height: 40px; font-size: 20px; opacity: .85;}
+._prof_left{border-top-left-radius: 17px; border-bottom-left-radius: 17px;}
+._prof_right{border-top-right-radius: 17px; border-bottom-right-radius: 17px;}
+.__name, .__surname, .__bio, .__phone, .__location{font-family: 'ZCOOL XiaoWei', serif;}
+._active_prof{border: 20px solid #343a40; line-height: 3px; opacity: 1;}
+
+/*TYPE="FILE" SYLE*/
+.file_upload{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: box-shadow 0.1s linear
+}
+.file_upload.focus{
+    box-shadow: 0 0 5px rgba(0,30,255,0.4)
+}
+.file_upload > button{
+    background: #7300df;
+    transition: background 0.2s;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    border-radius: 2px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #fff;
+    text-shadow: #6200bd 0 -1px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+.file_upload:hover > button{
+    background: #6200bd;
+    text-shadow: #5d00b3 0 -1px 0
+}
+.file_upload:active > button{
+    background: #5d00b3;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3) inset
+}

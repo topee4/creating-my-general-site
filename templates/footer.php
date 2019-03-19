@@ -31,6 +31,9 @@
             case 'game':
                 echo '<script src="js/game.js"></script>';
                 break;
+            case 'profile':
+                echo '<script src="js/profile.js"></script>';
+                break;
             case 'market':
                 echo '<script src="js/market.js"></script>';
                 break;
