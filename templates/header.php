@@ -13,11 +13,11 @@
     switch ($route) {
         case 'login':
         case 'signup':
-        echo '<link rel="stylesheet" href="css/login.css">';
-        break;
+            echo '<link rel="stylesheet" href="css/login.css">';
+            break;
         case 'game':
-        echo '<link rel="stylesheet" href="css/game.css">';
-        break;
+            echo '<link rel="stylesheet" href="css/game.css">';
+            break;
     }
     ?>
     <title>AS market</title>

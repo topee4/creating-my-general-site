@@ -19,6 +19,12 @@ if ( isset($_POST['do_logout']) ) {
 
 
     switch ($route){
+        //WORKS
+        case 'templates/works/ajax.php':
+            require 'templates/works/ajax.php';
+            break;
+        //WORKS//
+
         case '':
             require 'templates/main.php';
             break;
@@ -39,6 +45,9 @@ if ( isset($_POST['do_logout']) ) {
 
         case 'market':
             require 'templates/market.php';
+            break;
+        case 'works':
+            require 'templates/works.php';
             break;
         case 'about':
             require 'pages/portfolio/index.php';
@@ -71,7 +80,7 @@ if ( isset($_POST['do_logout']) ) {
 
 function searchForm () {
     global $route;
-    echo '<form action="/search/' . $route . '" method="POST"><input type="text" name="text" placeholder="Поиск" required><input type="submit" name="enter" value="Искать"></form>';
+    echo '<form action="/search_' . $route . '" method="POST"><input type="text" name="text" placeholder="Поиск" required><input type="submit" name="enter" value="Искать"></form>';
 }
 
 function messageSend ($p1, $p2, $p3) {
