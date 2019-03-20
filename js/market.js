@@ -70,45 +70,47 @@ function checkBasket(){
                                                                             
 
 
-var paginator = [];
+// var paginator = [];
 
-$(document).ready(function () {
-    add_Events();
-    showpaginator();
-    $('#_main-logo').on('click', function () {
-        var checker = 'main';
-        paginator[0] = checker;
-        localStorage.setItem('paginator', JSON.stringify(paginator));
-    });
-});
+// $(document).ready(function () {
+//     append_events();
+//     header_showmenu();
+//     add_Events();
+//     showpaginator();
+//     $('#_main-logo').on('click', function () {
+//         var checker = 'main';
+//         paginator[0] = checker;
+//         localStorage.setItem('paginator', JSON.stringify(paginator));
+//     });
+// });
 
 
 
 
-function add_Events() {
-    $('.paginat_btn').on('click', function () {
+// function add_Events() {
+//     $('.paginat_btn').on('click', function () {
         
-        $(this).addClass("active");
-        var checker = $(this).attr("data-page");
+//         $(this).addClass("_active_pag");
+//         var checker = $(this).attr("data-page");
 
-        if (paginator[0] != undefined) {
-            paginator[0] = checker;
-        } else {
-            paginator[0] = checker;
-        }
-        localStorage.setItem('paginator', JSON.stringify(paginator));
-    });
-    showpaginator();
-}
+//         if (paginator[0] != undefined) {
+//             paginator[0] = checker;
+//         } else {
+//             paginator[0] = checker;
+//         }
+//         localStorage.setItem('paginator', JSON.stringify(paginator));
+//     });
+//     showpaginator();
+// }
 
 
-function showpaginator() {
-    if (localStorage.getItem('paginator') != null) {
-        take = JSON.parse(localStorage.getItem('paginator'));
-        $.each($('.paginat_btn'), function () {
-            if ($(this).attr('data-page') == take[0]) {
-             $(this).addClass("active");
-            }
-        });
-    }
-}
+// function showpaginator() {
+//     if (localStorage.getItem('paginator') != null) {
+//         take = JSON.parse(localStorage.getItem('paginator'));
+//         $.each($('.paginat_btn'), function () {
+//             if ($(this).attr('data-page') == take[0]) {
+//              $(this).addClass("_active_pag");
+//             }
+//         });
+//     }
+// }

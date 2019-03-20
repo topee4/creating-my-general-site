@@ -48,7 +48,7 @@ function addToCart(){
     } else {
         basket[id] = 1;
     }   
-
+    $(this).find(".hiddenCart").addClass("_flag");
     localStorage.setItem('basket', JSON.stringify(basket));
 }
 function checkBasket(){

@@ -17,7 +17,8 @@
 <!-- NAVS --><div class="nav_">
   <a href="main"><button type="button" class="btn btn-light _header_navs _header_navs_before" data-check="main">main</button></a>
   <a href="market"><button type="button" class="btn btn-light _header_navs _header_navs_before" data-check="market">market</button></a>
-  <a href="game"><button type="button" class="btn btn-light _header_navs _header_navs_before" data-check="game">game</button></a>
+  <a href="games"><button type="button" class="btn btn-light _header_navs _header_navs_before" data-check="games">games</button></a>
+  <a href="works"><button type="button" class="btn btn-light _header_navs _header_navs_before" data-check="works">works</button></a>
   <a href="pages/portfolio/index.php"><button type="button" class="btn btn-light _header_navs_before" data-check="about">about</button></a>
   
 </div>

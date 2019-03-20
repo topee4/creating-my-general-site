@@ -1,11 +1,11 @@
 <!-- TITLE  (AFTER NAV-HEADER) -->
-
+<div class="_general-container">
 <div class="container card bg-light mb-3">
     <div class="card-header"></div>
     <div class="jumbotron jumbotron-fluid bg-light _basket-height">
         <div class="container">
             <h1 class="display-4" id="_title">DRON - BASKET</h1>
-            
+
 <!-- SEND EMAIL -->
 <div class="container _contact-form">
     <div class="row">
@@ -54,7 +54,6 @@
 </div>
 </div>
 
-
   <!-- CONTACT FORM -->
 
   <!-- <div class="container">
@@ -78,3 +77,4 @@
         </div>
     </div>
 </div> -->
+</div>

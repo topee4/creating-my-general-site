@@ -6,7 +6,7 @@
 <div class="card-header"></div>
   <div class="jumbotron jumbotron-fluid bg-light">
     <div class="container">
-    <h1 class="display-4">DRON - BLOG</h1>
+      <h1 class="display-4">DRON - BLOG</h1>
       <p class="lead">Здесь Вы можете отслеживать мои достижения</p>
     </div>
   </div>
@@ -72,5 +72,4 @@
 
     </div>
   </div>
-</div>
 </div>
