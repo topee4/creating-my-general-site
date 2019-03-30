@@ -6,13 +6,14 @@
       <div class="_left"></div>
       <div class="_right"></div>
     </div>
-  </div>
+</div>
       <div class="row _footer">
         <div class="col"><h3>FOOTER</h3></div>
         <div class="col-6 text-center"><h1>FOOTER</h1></div>
       <div class="col text-right"><h3>FOOTER</h3></div>
     </div>
   </div>
+  
 <!-- SCRITS --><!-- SCRITS --><!-- SCRITS --><!-- SCRITS --><!-- SCRITS --><!-- SCRITS --><!-- SCRITS --><!-- SCRITS --><!-- SCRITS --><!-- SCRITS --><!-- SCRITS --><!-- SCRITS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -28,14 +29,20 @@
                 break;
             case 'main':
                 break;
+            case 'game':
+                echo '<script src="js/game.js"></script>';
+                break;
+            case 'profile':
+                echo '<script src="js/profile.js"></script>';
+                break;
             case 'market':
-            echo '<script src="js/market.js"></script>';
+                echo '<script src="js/market.js"></script>';
                 break;
             case 'fruits':
-            echo '<script src="js/fruits.js"></script>';
+                echo '<script src="js/fruits.js"></script>';
                 break;
             case 'vegetables':
-            echo '<script src="js/vegetables.js"></script>';
+                echo '<script src="js/vegetables.js"></script>';
                 break;
             case 'basket':
                 echo '<script src="js/basket.js"></script>';
