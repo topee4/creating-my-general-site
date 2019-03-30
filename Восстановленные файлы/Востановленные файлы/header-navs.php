@@ -20,7 +20,6 @@
   <a href="games"><button type="button" class="btn btn-light _header_navs _header_navs_before" data-check="games">games</button></a>
   <a href="works"><button type="button" class="btn btn-light _header_navs _header_navs_before" data-check="works">works</button></a>
   <a href="pages/portfolio/index.php"><button type="button" class="btn btn-light _header_navs_before" data-check="about">about</button></a>
-  <a href="store"><button type="button" class="btn btn-light _header_navs _header_navs_before" data-check="store">store</button></a>
   
 </div>
             
