@@ -57,15 +57,15 @@
         <?php
         echo '<div class="paginator">';
         if ( $page > 1 ) {
-            echo '<a href="/market&page=' . ($page - 1) . '#bottom"><button type="button" data-page="' . ($page-1) . '" style="width: 100px; height: 40px;" class="btn _paginator paginat_btn">Prev</button></a>';
+            echo '<a href="/market&page=' . ($page - 1) . '#bottom"><button type="button" data-page="' . ($page-1) . '" class="btn btn-secondary paginat_btn">Prev</button></a>';
         }
         for ($i = 1; $i < $total_pages+1; $i++) {
             ?>
-            <a href="/market&page=<?php echo $i ?>#bottom"><button type="button" value="<?php echo $i; ?>" data-page="<?php echo $i?>" style="width: 100px; height: 40px;" class="btn _paginator paginat_btn"><?php echo $i ?></button></a>
+            <a href="/market&page=<?php echo $i ?>#bottom"><button type="button" data-page="<?php echo $i?>" class="btn btn-secondary paginat_btn"><?php echo $i ?></button></a>
             <?php
         }
         if ( $page < $total_pages ) {
-            echo '<a href="/market&page=' . ($page + 1) . '#bottom"><button type="button" data-page="' . ($page+1) . '" style="width: 100px; height: 40px;" class="btn _paginator paginat_btn">Next</button></a>';
+            echo '<a href="/market&page=' . ($page + 1) . '#bottom"><button type="button" data-page="' . ($page+1) . '" class="btn btn-secondary paginat_btn">Next</button></a>';
 
         }
         echo '</div>';
@@ -128,15 +128,15 @@
         <?php
         echo '<div class="paginator">';
         if ( $page > 1 ) {
-            echo '<a href="/market&page=' . ($page - 1) . '#bottom"><button type="button" data-page="' . ($page-1) . '" style="width: 100px; height: 40px;" class="btn _paginator paginat_btn">Prev</button></a>';
+            echo '<a href="/market&page=' . ($page - 1) . '#bottom"><button type="button" data-page="' . ($page-1) . '" class="btn btn-secondary paginat_btn">Prev</button></a>';
         }
         for ($i = 1; $i < $total_pages+1; $i++) {
             ?>
-            <a href="/market&page=<?php echo $i ?>#bottom"><button type="button" value="<?php echo $i; ?>" data-page="<?php echo $i?>" style="width: 100px; height: 40px;" class="btn _paginator paginat_btn"><?php echo $i ?></button></a>
+            <a href="/market&page=<?php echo $i ?>#bottom"><button type="button" data-page="<?php echo $i?>" class="btn btn-secondary paginat_btn"><?php echo $i ?></button></a>
             <?php
         }
         if ( $page < $total_pages ) {
-            echo '<a href="/market&page=' . ($page + 1) . '#bottom"><button type="button" data-page="' . ($page+1) . '" style="width: 100px; height: 40px;" class="btn _paginator paginat_btn">Next</button></a>';
+            echo '<a href="/market&page=' . ($page + 1) . '#bottom"><button type="button" data-page="' . ($page+1) . '" class="btn btn-secondary paginat_btn">Next</button></a>';
 
         }
         echo '</div>';
@@ -146,6 +146,7 @@
         <?php
     }
 ?>       
+                
         </div>
 </div>
 </div>

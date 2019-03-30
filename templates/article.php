@@ -44,7 +44,7 @@
           <div class="card border-dark mb-3">
           <div class="card-header"><h5><?php echo $item['title']; ?></h5></a></div>
               <div class="card-body text-dark">
-                <h5 class="card-title text-center"><img src="images/articles/<?php echo $item['img']; ?>" width="100%" alt="image"></h5>
+                <h5 class="card-title"><img src="images/articles/<?php echo $item['img']; ?>" width="100%" height="100%" alt="image"></h5>
                 <p class="card-text"><p><?php echo $item['description']; ?></p></p>
               </div>
             <div class="card-footer bg-transparent border-dark">
@@ -69,6 +69,7 @@
             }
           }
       ?>
+
     </div>
   </div>
 </div>
